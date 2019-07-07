@@ -243,7 +243,7 @@ export class MatKeyboardKeyComponent implements OnInit {
   }
 
   private replaceSelectedText(char: string): void {
-    const value = this.inputValue;
+    const value = this.inputValue? this.inputValue: '';
     const caret = this.input ? this._getCursorPosition() : 0;
     const selectionLength = this._getSelectionLength();
     const headPart = value.slice(0, caret);
